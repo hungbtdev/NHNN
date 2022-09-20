@@ -1,4 +1,0 @@
-@using Vinorsoft.Core.NotiApp
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@using DevExtreme.AspNet.Mvc
-@using Vinorsoft.Core.DTO

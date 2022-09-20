@@ -1,2 +1,0 @@
-﻿@model EmailTemplateDTO
-@await Html.PartialAsync("_Share", Model)

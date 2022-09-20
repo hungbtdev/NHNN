@@ -1,2 +1,0 @@
-xcopy "D:\Working\SVNwc\Projects\VinorSource\Trunks\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\*.*" "D:\Working\SVNwc\Projects\VinorSource\Trunks\SubProject\HP\VinorSoft.HP\Libs\netcoreapp2.2\*.*" /O /X /E /H /K /Y
-xcopy "D:\Working\SVNwc\Projects\VinorSource\Trunks\VinorsoftCore\Vinorsoft.Core\Libs\netstandard2.0\*.*" "D:\Working\SVNwc\Projects\VinorSource\Trunks\SubProject\HP\VinorSoft.HP\Libs\netstandard2.0\*.*" /O /X /E /H /K /Y

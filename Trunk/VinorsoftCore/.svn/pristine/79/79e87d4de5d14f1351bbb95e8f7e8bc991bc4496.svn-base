@@ -1,9 +1,0 @@
-﻿@{ 
-    IEnumerable<string> actionButtons = new[] { Resources.Button_Reset_Pwd,Resources.Button_Edit, Resources.Button_Delete };
-}
-@(Html.DevExtreme().DropDownButton()
-                    .Text(Resources.Button_Action)
-                    .Icon("fa-chevron-down")
-                    .DataSource(actionButtons)
-                    //.OnItemClick("downloadButton_click")
-)

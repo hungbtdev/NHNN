@@ -1,9 +1,0 @@
-﻿<footer class="sticky-footer bg-gradient-primary text-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <p class="font-weight-bold">@Html.Raw(ViewData["AppDescription"])</p>
-            <p>@Html.Raw(ViewData["Copyright"])</p>
-            <p>@Html.Raw(ViewData["Footer_Address"]) </p>
-        </div>
-    </div>
-</footer>
