@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model ChangePasswordDTO
+
+@await Component.InvokeAsync("FormTitle")
+
+@using (Html.BeginForm("ChangePassword", "ChangePassword", FormMethod.Post, new { Area = "System", id = "form-change-password" }))
+{
+
+    @(Html.DevExtreme().Form<ChangePasswordDTO>()
+                            .ID("form-change-password")
+                            .ColCount(3)
+                            .Items(items =>
+                            {
+                                items.AddEmpty();
+                                items.AddGroup()
+                                .Items(groupItems =>
+                                {
+                                    groupItems.AddSimpleFor(m => m.Password)
+                                    .Editor(e => e.TextBox().Mode(TextBoxMode.Password));
+
+                                    groupItems.AddSimpleFor(m => m.NewPassword)
+                                    .Editor(e => e.TextBox().Mode(TextBoxMode.Password));
+
+                                    groupItems.AddSimpleFor(m => m.ConfirmPassword)
+                                    .Editor(e => e.TextBox().Mode(TextBoxMode.Password));
+
+                                    groupItems.AddSimple()
+                                    .Template(@<text>@await Html.PartialAsync("_FormFooter")</text>);
+
+                                                                });
+                                                                items.AddEmpty();
+                                                            }).ValidationGroup("change_password").FormData(Model))
+}
+
+@await Html.PartialAsync("_Scripts")

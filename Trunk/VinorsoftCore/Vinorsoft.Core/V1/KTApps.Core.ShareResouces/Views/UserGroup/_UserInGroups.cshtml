@@ -1,0 +1,57 @@
+﻿<div class="row">
+
+    <div class="col-md-4 ">
+        <div class="input-group">
+            <input type="text"
+                   class="form-control"
+                   ng-model="SeletedUser"
+                   auto-complete="autoCompleteUsers"
+                   placeholder="Thông tin user">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                    <i class="fa fa-user"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-8">
+
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th width="50">#</th>
+                    <th width="120">Tên đăng nhập</th>
+                    <th>Họ tên </th>
+                    <th width="50"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="item in newItem.UserInGroups | filter :{ Deleted:false }">
+                    <td>
+                        {{$index + 1}}
+                    </td>
+                    <td>
+                        {{item.Users.Username}}
+                    </td>
+                    <td>
+                        {{item.Users.UserProfiles.FirstName}} {{item.Users.UserProfiles.LastName}}
+                    </td>
+                    <td class="text-right">
+                        <button type="button"
+                                ng-click="onDeleteItem(item)"
+                                uib-tooltip="Xóa"
+                                class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

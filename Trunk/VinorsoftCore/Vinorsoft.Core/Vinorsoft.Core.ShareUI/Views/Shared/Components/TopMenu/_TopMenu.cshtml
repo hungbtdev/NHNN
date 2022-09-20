@@ -1,0 +1,27 @@
+﻿<div class="form">
+    @(Html.DevExtreme().Menu()
+                                                .ID("menu")
+                                                .DataSource(d => d.Mvc()
+                                                .Area("System")
+                                                .Controller("TopMenu")
+                                                .LoadAction("GetMenus"))
+                                                .HideSubmenuOnMouseLeave(false)
+                                                .OnItemRendered("onItemRendered")
+                                                .OnItemClick("menuItem_click")
+    )
+</div>
+
+<script>
+    function menuItem_click(data) {
+        var item = data.itemData;
+        if (item.url && item.url != '#')
+            window.location.href = item.url;
+    }
+    function onItemRendered(e) {
+        if (e.itemData.url === undefined || e.itemData.url === null || (e.itemData.items && e.itemData.items.length > 0)) return;
+        var link = $('<a>', { href: e.itemData.url, class: 'top_menu_link' });
+        var itemText = e.itemElement.find(".dx-menu-item-text").text();
+        link.text(itemText);
+        e.itemElement.find(".dx-menu-item-text").html(link);
+    }  
+</script>

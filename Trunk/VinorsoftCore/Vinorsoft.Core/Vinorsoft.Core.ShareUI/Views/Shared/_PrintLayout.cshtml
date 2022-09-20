@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/libs/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/devextreme/dx.common.css" rel="stylesheet" />
+    <link href="~/css/devextreme/dx.light.css" rel="stylesheet" />
+    <link href="~/libs/@@devexpress/analytics-core/dist/css/dx-analytics.common.css" rel="stylesheet" />
+    <link href="~/libs/@@devexpress/analytics-core/dist/css/dx-analytics.light.css" rel="stylesheet" />
+    <link href="~/libs/devexpress-reporting/dist/css/dx-webdocumentviewer.css" rel="stylesheet" />
+
+    <!-- 3rd-party dependencies -->
+    <script src="~/libs/jquery/dist/jquery.js"></script>
+    <script src="~/libs/jquery-ui-dist/jquery-ui.js"></script>
+    <script src="~/libs/knockout/build/output/knockout-latest.js"></script>
+    <script src="~/libs/cldrjs/dist/cldr.js"></script>
+    <script src="~/libs/cldrjs/dist/cldr/event.js"></script>
+    <script src="~/libs/cldrjs/dist/cldr/supplemental.js"></script>
+    <script src="~/libs/cldrjs/dist/cldr/unresolved.js"></script>
+    <script src="~/libs/globalize/dist/globalize.js"></script>
+    <script src="~/libs/globalize/dist/globalize/message.js"></script>
+    <script src="~/libs/globalize/dist/globalize/number.js"></script>
+    <script src="~/libs/globalize/dist/globalize/currency.js"></script>
+    <script src="~/libs/globalize/dist/globalize/date.js"></script>
+
+    @(await Component.InvokeAsync("Header"))
+    @RenderSection("Localization", false)
+
+    <script>
+        function uuidv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img alt="cns-logo" class="navbar-logo" src="~/css/images/logo.png" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="navbar-nav mr-auto">
+                @(await Component.InvokeAsync("TopMenu"))
+            </div>
+            @(await Component.InvokeAsync("UserPanel"))
+        </div>
+    </nav>
+
+
+    <main role="main" class="container-fluid">
+        @RenderBody()
+    </main>
+
+    @(await Component.InvokeAsync("Footer"))
+
+    @RenderSection("Scripts", required: false)
+    <script>
+                       // DevExpress.localization.locale('vi');
+    </script>
+
+</body>
+</html>

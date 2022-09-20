@@ -1,0 +1,121 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="coreCtrl"
+     ng-init="onInit()">
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div block-ui="uiBlock">
+            @await Html.PartialAsync("_FormTitle")
+
+            <form name="newForm"
+                  id="newForm"
+                  class="user">
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="BrandName"
+                               class="col-form-label">
+                            BrandName <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.BrandName"
+                               name="BrandName"
+                               validation="required|max_len:128"
+                               placeholder="BrandName">
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="Host"
+                               class="col-form-label">
+                            Host <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.Host"
+                               name="Host"
+                               validation="required|max_len:128"
+                               placeholder="Host">
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="Scheme"
+                               class="col-form-label">
+                            Scheme <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.Scheme"
+                               name="Scheme"
+                               validation="required|max_len:128"
+                               placeholder="Scheme">
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="Path"
+                               class="col-form-label">
+                            Path
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.Path"
+                               name="Path"
+                               validation="max_len:128"
+                               placeholder="Path">
+                    </div>
+                </div>
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label for="BrandName"
+                               class="col-form-label">
+                            Port <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="number"
+                               class="form-control"
+                               ng-model="newItem.Port"
+                               name="Port"
+                               validation="required"
+                               placeholder="Port">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="UserName"
+                               class="col-form-label">
+                            Tên đăng nhập <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.UserName"
+                               name="UserName"
+                               validation="required|max_len:128"
+                               placeholder="UserName">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="Password"
+                               class="col-form-label">
+                            Password <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="password"
+                               class="form-control"
+                               ng-model="newItem.Password"
+                               name="Password"
+                               validation="required"
+                               placeholder="Password">
+                    </div>
+                </div>
+                <!--Button Save-->
+                @await Html.PartialAsync("_CatalogueButtons")
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+}

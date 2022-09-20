@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>$(SolutionDir)\Libs\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <OutputPath>$(SolutionDir)\Libs\</OutputPath> </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LazyCache.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.19" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="KTApp.Core.Resources">
+      <HintPath>..\Libs\netcoreapp2.2\KTApp.Core.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.AuthService">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.AuthService.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Core">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Core.LoggingService">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Core.LoggingService.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Core.NotificationService">
+      <HintPath>..\Libs\netcoreapp2.2\KTApps.Core.NotificationService.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Core.Utils">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Domain">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Import.Dynamic">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Import.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.Models">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="KTApps.ShareService">
+      <HintPath>$(SolutionDir)\Libs\netcoreapp2.2\KTApps.ShareService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

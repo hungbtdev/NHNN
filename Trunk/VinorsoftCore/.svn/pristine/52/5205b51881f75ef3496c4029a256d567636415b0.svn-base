@@ -1,0 +1,44 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+}
+
+@await Component.InvokeAsync("FormTitle")
+
+@(Html.DevExtreme().DataGrid<PermitObjectDTO>().ToCatalogueDefaultOption().DataSource(d => d.Mvc()
+                                                                            .Controller(controllerName)
+                                                                            .Area(areaName)
+                                                                            .LoadAction("Get")
+                                                                            .DeleteAction("Delete")
+                                                                            .Key("Id"))
+                                                                       .OnEditingStart("onUpdateItem")
+                                                                       .OnToolbarPreparing("toolbar_preparing")
+                                                                       .MasterDetail(detail =>
+                                                                       {
+                                                                           detail.Enabled(true);
+                                                                           detail.Template(@<text> @await Html.PartialAsync("_PermitObjectDetail") </text>);
+                                                                                                                                                   })
+)
+
+<script>
+
+    function onUpdateItem(e) {
+        e.cancel = true;
+        window.location.href = '@Url.Action("UpdatePermitObject", controllerName, new { Area = areaName })/' + e.key;
+    }
+
+    function toolbar_preparing(e) {
+        var dataGrid = e.component;
+        e.toolbarOptions.items.unshift({
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "plus",
+                onClick: function () {
+                    window.location.href = '@Url.Action("NewPermitObject", controllerName , new { Area = areaName })'
+                }
+            }
+        })
+    }
+</script>
+

@@ -1,0 +1,20 @@
+﻿using AutoMapper;
+using Vinorsoft.NHNN.Report.DTO;
+using Vinorsoft.NHNN.Report.Service.Entities;
+
+namespace Vinorsoft.NHNN.Report.App.Automapper
+{
+    public class NHNNAutoMapperProfile : Profile
+    {
+        public NHNNAutoMapperProfile()
+        {
+            CreateMap<UserListDTO, UserList>().ReverseMap();
+            CreateMap<UserConfigDTO, UserConfigs>().ReverseMap();
+            CreateMap<AccessHistoricalDTO, AccessHistorical>().ForMember(x => x.Deleted, opt => opt.Ignore());
+            CreateMap<AccessHistorical, AccessHistoricalDTO>().ForMember(x => x.Deleted, opt => opt.Ignore());
+            CreateMap<UserPermitConfigs, UserPermitConfigDTO>().ReverseMap();
+            CreateMap<UserViewList, UserViewListDTO>().ReverseMap();
+            CreateMap<UserViewDetail, UserViewDetailDTO>().ReverseMap();
+        }
+    }
+}

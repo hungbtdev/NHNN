@@ -1,0 +1,17 @@
+﻿@section Localization {
+    <script src="~/js/devextreme-intl.min.js"></script>
+    <script src="~/js/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.vi"></script>
+    <script src="~/js/devextreme/localization/dx.messages.vi.js"></script>
+}
+
+<div class="home_bg row">
+    <div class="col-md-12 text-center p-5">
+        <img src="/css/images/logo.png" alt="logo" />
+    </div>
+</div>
+
+<style>
+    .home_bg img {
+        margin-top: 5%;
+    }
+</style>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @RenderSection("Localization", false)
+
+    @(await Component.InvokeAsync("Header"))
+</head>
+
+<body class="bg-white">
+
+    <main role="main" class="container-fluid">
+        @RenderBody()
+    </main>
+
+    @(await Component.InvokeAsync("Footer"))
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

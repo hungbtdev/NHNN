@@ -1,0 +1,84 @@
+﻿@model UserGroupDTO
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+}
+
+@await Component.InvokeAsync("FormTitle")
+
+<div id="form-container">
+
+    @await Html.PartialAsync("_ErrorAlert")
+
+    @using (Html.BeginForm("NewUserGroup", controllerName, FormMethod.Post, new { Area = areaName, id = "NewUserGroupForm" }))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.Created)
+        @Html.HiddenFor(m => m.CreatedBy)
+        @Html.HiddenFor(m => m.SelectedPermissionJson)
+
+        @(Html.DevExtreme().Form<UserGroupDTO>().ID("form").ColCount(2).Items(items =>
+                                                {
+                                                    items.AddGroup().Caption(Resources.UserGroup_Info).Items(groupItems =>
+                                                    {
+                                                        groupItems.AddSimpleFor(m => m.Code).IsRequired(true);
+                                                        groupItems.AddSimpleFor(m => m.Name).IsRequired(true);
+                                                        groupItems.AddSimpleFor(m => m.Description)
+                                                        .Editor(e => e.TextArea().Height(80)).ColSpan(2);
+                                                    }).ColSpan(1).ColCount(2);
+
+                                                    items.AddGroup().Caption(Resources.Permission_Info).Items(groupItems =>
+                                                    {
+                                                        groupItems.AddSimple().Template(@<text> @await Html.PartialAsync("_Permission", Model) </text>);
+                                                                                                    }).ColSpan(1);
+
+                                                                                                }).ValidationGroup("UserGroup").FormData(Model)
+        )
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                @(Html.DevExtreme().Button().Text(Resources.UserGroup_Cancel).UseSubmitBehavior(false).Width(100).OnClick("goBack")
+                )
+                @(Html.DevExtreme().Button().Text(Resources.UserGroup_Submit).Type(ButtonType.Success).UseSubmitBehavior(false).ValidationGroup("UserGroup").OnClick("clickHandler")
+                )
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    function goBack() {
+        window.location.href = '@Url.Action("Index", controllerName, new { Area = areaName })'
+    }
+    function clickHandler(e) {
+        if (e.validationGroup.validate().isValid) {
+            var results = [];
+            var nodes = $("#TreeView").dxTreeView('instance').getNodes();
+            if (nodes) {
+                for (var i = 0; i < nodes.length; i++) {
+                    if (nodes[i].children) {
+                        for (var j = 0; j < nodes[i].children.length; j++) {
+                            if (nodes[i].children[j].selected) {
+                                results.push({
+                                    PermitObjectId: nodes[i].itemData.Id,
+                                    PermissionId: nodes[i].children[j].itemData.Id,
+                                    GroupId: '@Model.Id',
+                                    Created: new Date(),
+                                    CreatedBy: '@LoginContext.Instance.CurrentUser.UserName',
+                                    Id: uuidv4()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (results.length > 0) {
+                $('#SelectedPermissionJson').val(JSON.stringify(results));
+            }
+            $("#NewUserGroupForm").submit();
+        }
+    }
+
+</script>

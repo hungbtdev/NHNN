@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Vinorsoft.Core.Utils/1.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Vinorsoft.Core.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

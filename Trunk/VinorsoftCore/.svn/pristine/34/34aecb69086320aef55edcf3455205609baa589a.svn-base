@@ -1,0 +1,32 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areName = ViewContext.RouteData.Values["area"].ToString();
+}
+@await Component.InvokeAsync("FormTitle")
+
+@(Html.DevExtreme().DataGrid<CatalogueObjectDTO>().ToCatalogueDefaultOption()
+                                                .DataSource(d => d.Mvc()
+                                                    .Controller(controllerName)
+                                                    .Area(areName)
+                                                    .LoadAction("Get")
+                                                    .InsertAction("Insert")
+                                                    .UpdateAction("Update")
+                                                    .DeleteAction("Delete")
+                                                    .Key("Id")
+                                                )
+                                                .Editing(e =>
+                                                    e.AllowAdding(true)
+                                                    .AllowDeleting(true)
+                                                    .AllowUpdating(true)
+                                                    .Mode(GridEditMode.Batch)
+                                                    .UseIcons(true)
+                                                    .SelectTextOnEditStart(true)
+                                                )
+                                               .Export(e => e.Enabled(true)
+                                               .FileName($"{ViewData["Title"]}")
+                                               .AllowExportSelectedData(true))
+                                               .OnInitNewRow("onInitNewRow")
+)
+
+@await Html.PartialAsync("_CatalogueScripts")
+

@@ -1,0 +1,13 @@
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Libs\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.deps.json
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Libs\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.dll
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Libs\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.pdb
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.csproj.AssemblyReference.cache
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.Vinorsoft.NHNN.Report.DevEx.DTO.Resource.resources
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.csproj.GenerateResource.cache
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.AssemblyInfoInputs.cache
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.AssemblyInfo.cs
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.csproj.CoreCompileInputs.cache
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.csproj.CopyComplete
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.dll
+E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.DTO\obj\Release\netcoreapp2.2\Vinorsoft.NHNN.Report.DTO.pdb

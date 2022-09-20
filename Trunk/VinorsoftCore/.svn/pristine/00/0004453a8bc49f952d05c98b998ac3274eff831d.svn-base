@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="coreCtrl"
+     ng-init="onInit()">
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div block-ui="uiBlock">
+            @await Html.PartialAsync("_FormTitle")
+
+            <form name="newForm"
+                  id="newForm"
+                  class="user">
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="RefId"
+                               class="col-form-label">
+                            RefId <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.RefId"
+                               name="RefId"
+                               validation="required|max_len:255"
+                               placeholder="RefId">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="FCMToken"
+                               class="col-form-label">
+                            FCMToken <span class="text-danger">(*)</span>
+                        </label>
+                        <textarea rows="3"
+                                  class="form-control"
+                                  ng-model="newItem.FCMToken"
+                                  name="FCMToken"
+                                  validation="required"
+                                  placeholder="FCMToken"></textarea>
+                    </div>
+                </div>
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="Password"
+                               class="col-form-label">
+                            Model <span class="text-danger">(*)</span>
+                        </label>
+                        <textarea rows="3"
+                                  class="form-control"
+                                  ng-model="newItem.Model"
+                                  name="Model"
+                                  validation="required"
+                                  placeholder="Model"></textarea>
+                    </div>
+                </div>
+                <!--Button Save-->
+                @await Html.PartialAsync("_CatalogueButtons")
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+}

@@ -1,0 +1,23 @@
+﻿
+<div class="row">
+    <div class="col-md-4">
+        <p>
+           Trang {{search.PageIndex}}/{{dataPage.TotalPage}} - Tổng: {{dataPage.TotalItem}} dòng
+        </p>
+    </div>
+    <div class="col-md-8">
+        <ul uib-pagination
+            max-size="10"
+            total-items="dataPage.TotalItem"
+            ng-model="search.PageIndex"
+            ng-change="onGetData()"
+            direction-links="false"
+            boundary-links="true"
+            class="pagination-sm float-right"
+            items-per-page="20"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;"></ul>
+    </div>
+</div>

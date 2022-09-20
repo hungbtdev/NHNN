@@ -1,0 +1,31 @@
+﻿@model FCMTemplateDTO
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+    var actionName = ViewContext.RouteData.Values["action"].ToString();
+    bool readOnlyCode = actionName.Contains("Update");
+}
+@await Component.InvokeAsync("FormTitle")
+
+@using (Html.BeginForm(actionName, controllerName, new { ReturnUrl = $"{Context.Request.Query["ReturnUrl"] }", Area = areaName, }, FormMethod.Post, false, new { id = "mainformEmailTemplate" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(e => e.Id)
+    @Html.HiddenFor(e => e.Created)
+    @Html.HiddenFor(e => e.CreatedBy)
+    @Html.HiddenFor(e => e.Updated)
+    @Html.HiddenFor(e => e.UpdatedBy)
+    @(Html.DevExtreme().Form<EmailTemplateDTO>().FormData(Model).ID("formEmailTemplate").ColCount(3).Items(items =>
+        {
+
+            items.AddSimpleFor(e => e.Code).Editor(e=>e.TextBox().ReadOnly(readOnlyCode)).Label(e => e.Location(FormLabelLocation.Top));
+            items.AddSimpleFor(e => e.AppName).Label(e => e.Location(FormLabelLocation.Top));
+            items.AddEmpty();
+            items.AddSimpleFor(e => e.Subject).ColSpan(3).Editor(e => e.TextArea().Height(80)).Label(e => e.Location(FormLabelLocation.Top));
+            items.AddSimpleFor(e => e.Body).Label(e => e.Location(FormLabelLocation.Top)).ColSpan(3).Editor(e => e.TextArea().Height(100));
+            items.AddSimple().ColSpan(3).Template(@<text> @await Html.PartialAsync("_Form2Buttons") </text>);
+            }).ValidationGroup("Template")
+    )
+}
+
+@await Html.PartialAsync("_Scripts")

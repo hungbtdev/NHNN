@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="FCMPendingCtrl as coreCtrl">
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div class="card-body p-0" block-ui="uiBlock">
+
+            @await Html.PartialAsync("_FormTitle")
+
+            @await Html.PartialAsync("_DTTableTemplate")
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+    <script src="~/js/controllers/notification/FCMPendingCtrl.js"></script>
+}

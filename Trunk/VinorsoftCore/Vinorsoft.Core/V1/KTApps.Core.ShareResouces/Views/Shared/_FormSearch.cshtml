@@ -1,0 +1,33 @@
+﻿<form class="user"
+      ng-submit="onGetData()">
+    <div class="row">
+        <div class="col-md-8">
+            <button type="button"
+                    tooltip-append-to-body="true"
+                    ng-click="onGetData()"
+                    uib-tooltip="Refresh"
+                    class="btn btn-primary btn-sm">
+                <i class="fa fa-sync-alt"></i>
+            </button>
+
+            <button type="button"
+                    tooltip-append-to-body="true"
+                    ng-click="export(search.TemplateName)"
+                    uib-tooltip="Export"
+                    class="btn btn-primary btn-sm">
+                <i class="fa fa-download"></i>
+            </button>
+
+        </div>
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <input type="search"
+                       ng-model="search.SearchContent"
+                       name="SearchString"
+                       class="form-control"
+                       placeholder="Nội dung tìm kiếm">
+            </div>
+        </div>
+    </div>
+</form>

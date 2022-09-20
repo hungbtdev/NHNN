@@ -1,0 +1,102 @@
+﻿<!--Url/Icon-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label for="Url"
+               class="col-form-label">
+            Url <span class="text-danger">(*)</span>
+        </label>
+        <input type="text"
+               class="form-control"
+               ng-model="newItem.Url"
+               name="Url"
+               validation="required|max_len:1000"
+               placeholder="Url">
+    </div>
+    <div class="col-sm-3">
+        <label for="Icon"
+               class="col-form-label">
+            Icon <span class="text-danger">(*)</span>
+        </label>
+        <input type="text"
+               class="form-control"
+               ng-model="newItem.Icon"
+               name="Icon"
+               validation="required|max_len:1000"
+               placeholder="Icon">
+    </div>
+    <div class="col-sm-3">
+        <label for="Position"
+               class="col-form-label">
+            Vị trí sắp xếp 
+        </label>
+        <input type="number"
+               class="form-control"
+               ng-model="newItem.Position"
+               name="Position"
+               placeholder="Position">
+    </div>
+</div>
+
+<!--Menu cha/Module-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label for="ParentId"
+               class="col-form-label">
+            Menu cha
+        </label>
+        <select placeholder="Menu cha"
+                ui-select2
+                style="width:100%"
+                name="ParentId"
+                ng-options="item.Id as item.Name for item in InitData.SlideBarItems"
+                ng-model="newItem.ParentId"
+                class="form-control"></select>
+    </div>
+
+    <div class="col-sm-6">
+        <label for="ModuleId"
+               class="col-form-label">
+            Module
+        </label>
+        <select placeholder="Module"
+                ui-select2
+                style="width:100%"
+                name="ModuleId"
+                ng-options="item.Id as item.Name for item in InitData.Modules"
+                ng-model="newItem.ModuleId"
+                class="form-control"></select>
+    </div>
+</div>
+
+<!--Mô tả-->
+<div class="form-group row">
+    <div class="col-md-12">
+        <label for="Description"
+               class="col-form-label">
+            Mô tả
+        </label>
+        <textarea rows="3"
+                  class="form-control"
+                  ng-model="newItem.Description"
+                  name="Description"
+                  validation="max_len:1000"
+                  placeholder="Mô tả"></textarea>
+    </div>
+</div>
+
+<!--Button Save-->
+<div class="form-group row">
+    <div class="col-md-12 text-right">
+        <button type="button"
+                onclick="backToList()"
+                class="btn btn-primary btn-user">
+            Đóng
+        </button>
+        <button type="button"
+                ng-click="onSave(newItem)"
+                ng-disabled="newForm.$invalid"
+                class="btn btn-primary btn-user">
+            Lưu thông tin
+        </button>
+    </div>
+</div>

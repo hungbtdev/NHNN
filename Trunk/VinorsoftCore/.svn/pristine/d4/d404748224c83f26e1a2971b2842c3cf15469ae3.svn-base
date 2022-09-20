@@ -1,0 +1,6 @@
+﻿<div class="row">
+    <div class="col-md-12 text-right">
+        @(Html.DevExtreme().Button().Text(Vinorsoft.Core.Resx.Resources.Button_Cancel).Type(ButtonType.Normal).UseSubmitBehavior(false).OnClick("goBack"))
+        @(Html.DevExtreme().Button().Text(Vinorsoft.Core.Resx.Resources.Button_Save).Type(ButtonType.Success).UseSubmitBehavior(true).ValidationGroup("Template"))
+    </div>
+</div>

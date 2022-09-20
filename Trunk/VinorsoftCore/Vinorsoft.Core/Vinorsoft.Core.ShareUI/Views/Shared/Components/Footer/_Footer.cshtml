@@ -1,0 +1,31 @@
+﻿@model FooterDTO
+
+<footer class="footer navbar-light bg-light">
+    <div class="container text-sm-center">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="media">
+                    <img src="@Model.LogoUrl" class="align-self-center mr-3 footer-logo" alt="app-logo">
+                    <div class="media-body">
+                        <p class="mt-0">@Html.Raw(Model.AppDescription)</p>
+@*                        @if (!string.IsNullOrEmpty(Model.BuildVersion))
+                        {
+                        <p class="mt-0">Buid Version: @Model.BuildVersion</p>
+                        }
+*@                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    @Html.Raw(Model.Copyright)
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    @Html.Raw(Model.CompanyAddress)
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,40 @@
+﻿.dataTables_wrapper.form-inline {
+    display: inherit;
+    display: inherit;
+    display: inherit;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+    -ms-flex-flow: inherit;
+    flex-flow: inherit;
+    -webkit-box-align: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+}
+
+a.dt-button {
+    margin-right: 5px;
+}
+
+.dataTables_length select {
+    border: 1px solid #E4E4E4;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.dataTables_length, .dataTables_filter {
+    display: contents;
+}
+
+table.dataTable tbody td:last-child, table.dataTable tbody th:last-child {
+    width: 80px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*.dataTables_filter input[type=search] {
+        border: 1px solid #E4E4E4;
+        border-radius: 3px;
+        margin-right: -15px;
+        min-width: 320px;
+    }*/

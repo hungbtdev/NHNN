@@ -1,0 +1,159 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="permitObjectCtrl"
+     ng-init="onInit()">
+
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div block-ui="uiBlock">
+            @await Html.PartialAsync("_FormTitle")
+
+            <form name="newForm"
+                  id="newForm"
+                  class="user">
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Code"
+                               class="col-form-label">
+                            Mã <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               ng-disabled="newItem.AutoGenerateCode"
+                               class="form-control"
+                               ng-model="newItem.Code"
+                               name="Code"
+                               validation="required|max_len:128"
+                               placeholder="Mã">
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="Code"
+                               class="col-form-label">
+                            &nbsp;
+                        </label>
+                        <div class="form-group">
+                            <div class="icheck-primary">
+                                <input type="checkbox"
+                                       ng-change="onChangeAutoGenerateCode(newItem.AutoGenerateCode)"
+                                       ng-model="newItem.AutoGenerateCode"
+                                       id="AutoGenerateCode"
+                                       name="AutoGenerateCode" />
+
+                                <label for="AutoGenerateCode">
+                                    Tự động tạo mã
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="Name"
+                               class="col-form-label">
+                            Tên <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.Name"
+                               name="Name"
+                               validation="required|max_len:128"
+                               placeholder="Tên">
+                    </div>
+                </div>
+
+                <!--Controller name-->
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="ControllerName"
+                               class="col-form-label">
+                            Controller <span class="text-danger">(*)</span>
+                        </label>
+
+                        <select ui-select2
+                                multiple
+                                style="width:100%"
+                                validation="required"
+                                id="Controllers-{{$index}}"
+                                name="Controllers-{{$index}}"
+                                ng-options="opt.Id as opt.Name for opt in InitData.Controllers"
+                                ng-model="newItem.Controllers"
+                                class="form-control"></select>
+                    </div>
+                </div>
+
+                <!--Mô tả-->
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label for="Description"
+                               class="col-form-label">
+                            Mô tả
+                        </label>
+                        <textarea rows="3"
+                                  class="form-control"
+                                  ng-model="newItem.Description"
+                                  name="Description"
+                                  validation="max_len:4000"
+                                  placeholder="Mô tả"></textarea>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="h4 text-gray-900 mb-4">DANH SÁCH MENU</h3>
+                </div>
+
+                <table class="table table-hover table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th width="50"># </th>
+                            <th width="200">Module</th>
+                            <th>Menu</th>
+                            <th width="50"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="item in newItem.PermitObjectSidebars">
+                            <td class="text-center">
+                                {{$index + 1}}
+                            </td>
+                            <td>
+                                {{getModuleName(item)}}
+                            </td>
+
+                            <td>
+                                <select ui-select2
+                                        multiple
+                                        style="width:100%"
+                                        id="SidebarIds-{{$index}}"
+                                        name="SidebarIds-{{$index}}"
+                                        ng-options="opt.Id as opt.Name for opt in InitData.SidebarItems | filter : { ModuleId: item.ModuleId }"
+                                        ng-model="item.SidebarIds"
+                                        class="form-control"></select>
+                            </td>
+                            <td>
+                                <button uib-tooltip="Chọn hết"
+                                        ng-click="selectedAllItem(item)"
+                                        type="button"
+                                        class="btn btn-primary btn-sm">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Button Save-->
+                @await Html.PartialAsync("_CatalogueButtons")
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+    <script src="~/js/controllers/permitObjectCtrl.js"></script>
+}

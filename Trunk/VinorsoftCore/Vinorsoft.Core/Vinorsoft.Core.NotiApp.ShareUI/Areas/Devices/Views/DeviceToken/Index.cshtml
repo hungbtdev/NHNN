@@ -1,0 +1,36 @@
+﻿@{
+
+}
+
+@await Component.InvokeAsync("FormTitle")
+
+@(Html.DevExtreme().DataGrid<DeviceTokenDTO>().ID("gridContainer").DataSource(d => d.Mvc().LoadAction("Get").DeleteAction("Delete").Key("Id"))
+                                        .Columns(column =>
+                                        {
+                                            column.AddFor(m => m.AppName).Width(200);
+                                            column.AddFor(m => m.DeviceName).Width(200);
+                                            column.AddFor(m => m.OsName).Width(200);
+                                            column.AddFor(m => m.Brand).Width(200);
+                                            column.AddFor(m => m.Manufacturer).Width(200);
+                                            column.AddFor(m => m.OsVersion).Width(200);
+                                            column.AddFor(m => m.IsDevice).Width(200);
+                                            column.AddFor(m => m.ModelName).Width(200);
+                                            column.AddFor(m => m.ExpoPushToken).Width(200);
+                                            column.AddFor(m => m.FCMToken).Width(200);
+                                            column.AddFor(m => m.Active).Width(200);
+
+                                            column.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+                                            {
+                                                b.Add().Name(GridColumnButtonName.Delete);
+                                            });
+                                        }).ToDefaultOption()
+                                       .OnToolbarPreparing("toolbar_preparing")
+                                       .Editing(e => e.AllowAdding(false)
+                                                    .AllowDeleting(true)
+                                                    .AllowUpdating(false).UseIcons(true))
+                                    .Export(e => e.Enabled(true).AllowExportSelectedData(true).FileName($"{NotificationResource.Export_DeviceToken_FileName}"))
+
+)
+
+@await Html.PartialAsync("_Scripts")
+

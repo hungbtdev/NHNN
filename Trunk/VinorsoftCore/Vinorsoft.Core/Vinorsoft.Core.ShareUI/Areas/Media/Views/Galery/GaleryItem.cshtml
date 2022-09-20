@@ -1,0 +1,54 @@
+﻿@model CoreUploadFileDTO
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+}
+
+@await Component.InvokeAsync("FormTitle")
+
+<div id="form-container">
+
+    @await Html.PartialAsync("_ErrorAlert")
+
+    @using (Html.BeginForm("GaleryItem", controllerName, FormMethod.Post, new { Area = areaName, id = "GaleryItemForm", enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.Created)
+        @Html.HiddenFor(m => m.CreatedBy)
+        @Html.HiddenFor(m => m.RefId)
+
+        @(Html.DevExtreme().Form<CoreUploadFileDTO>().ID("form").ColCount(2).Items(items =>
+                    {
+                        items.AddSimpleFor(m => m.Code).IsRequired(true);
+                        items.AddSimpleFor(m => m.Name).IsRequired(true);
+                        items.AddSimpleFor(m => m.Description).Editor(e => e.TextArea().Height(80)).ColSpan(1);
+                        items.AddSimple().ColSpan(1).Template(@<text>
+                            <div id="fileuploader-container">
+                                @(Html.DevExtreme().FileUploader()
+                                                        .Name("Photo")
+                                                        .SelectButtonText(Resources.Select_Photo)
+                                                        .LabelText("")
+                                                        .Accept("image/*")
+                                                        .UploadMode(FileUploadMode.UseForm)
+                                )
+                            </div>
+                        </text>);
+
+                                        items.AddSimple().ColSpan(2).Template(@<text>
+                                            <div class="row">
+                                                <div class="col-md-12 text-right">
+                                                    @(Html.DevExtreme().Button().Text(Resources.Button_Cancel).UseSubmitBehavior(false).Width(100).OnClick("goBack")
+                                                    )
+                                                    @(Html.DevExtreme().Button().Text(Resources.UserGroup_Submit).Type(ButtonType.Success).UseSubmitBehavior(true).ValidationGroup("Galery")
+                                                    )
+                                                </div>
+                                            </div>
+                                        </text>);
+
+                                                               }).ValidationGroup("Galery").FormData(Model)
+        )
+        <hr />
+    }
+</div>
+
+@await Html.PartialAsync("_Scripts")

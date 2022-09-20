@@ -1,0 +1,46 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+}
+
+@await Component.InvokeAsync("FormTitle")
+
+@(Html.DevExtreme().DataGrid<UserGroupDTO>()
+                                                                .DataSource(d => d.Mvc()
+                                                                    .Controller(controllerName)
+                                                                    .Area(areaName)
+                                                                    .LoadAction("Get")
+                                                                    .DeleteAction("Delete")
+                                                                    .Key("Id")
+                                                                )
+                                                                .MasterDetail(detail =>
+                                                                {
+                                                                    detail.Enabled(true);
+                                                                    detail.Template(@<text> @await Html.PartialAsync("_GridDetails") </text>);
+                                                                                                                                })
+                                                                                                                                                                                                                                                   .ToCatalogueDefaultOption()
+                                                                                                                                                                                                                                                   .OnEditingStart("onUpdateGroupUser")
+                                                                                                                                                                                                                                                   .OnToolbarPreparing("toolbar_preparing")
+)
+<script>
+
+    function onUpdateGroupUser(e) {
+        e.cancel = true;
+        window.location.href = '@Url.Action("UpdateUserGroup", controllerName, new { Area = areaName })/' + e.key;
+    }
+
+    function toolbar_preparing(e) {
+        var dataGrid = e.component;
+        e.toolbarOptions.items.unshift({
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "plus",
+                onClick: function () {
+                    window.location.href = '@Url.Action("NewUserGroup", controllerName , new { Area = areaName })'
+                }
+            }
+        })
+    }
+</script>
+

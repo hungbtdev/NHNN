@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="coreCtrl"
+     ng-init="onInit()">
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div block-ui="uiBlock">
+            @await Html.PartialAsync("_FormTitle")
+
+            <form name="newForm"
+                  id="newForm"
+                  class="user">
+
+                <!--Mã/Tên-->
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="OldChars"
+                               class="col-form-label">
+                            Chuỗi ký tự gốc <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.OldChars"
+                               name="OldChars"
+                               validation="required|max_len:128"
+                               placeholder="Ký tự cũ">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="Name"
+                               class="col-form-label">
+                            Chuỗi ký tự thay thế <span class="text-danger">(*)</span>
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newItem.NewChars"
+                               name="NewChars"
+                               validation="required|max_len:128"
+                               placeholder="Chuỗi ký tự thay thế">
+                    </div>
+                </div>
+
+                <!--Mô tả-->
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label for="Description"
+                               class="col-form-label">
+                            Mô tả
+                        </label>
+                        <textarea rows="3"
+                                  class="form-control"
+                                  ng-model="newItem.Description"
+                                  name="Description"
+                                  validation="required|max_len:4000"
+                                  placeholder="Mô tả"></textarea>
+                    </div>
+                </div>
+
+                <!--Button Save-->
+                @await Html.PartialAsync("_CatalogueButtons")
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+}

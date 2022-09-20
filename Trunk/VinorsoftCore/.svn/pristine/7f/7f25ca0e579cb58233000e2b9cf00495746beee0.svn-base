@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    @*<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">*@
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewData["Title"]</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/google-font.css" rel="stylesheet">
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/css/validation.css" rel="stylesheet" />
+    <link href="~/css/angular-block-ui.min.css" rel="stylesheet" />
+    <link href="~/lib/toast/toaster.min.css" rel="stylesheet" />
+    <link href="~/lib/select2/select2.min.css" rel="stylesheet" />
+    <link href="~/lib/icheck/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/datetimepicker/angular-moment-picker.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/css/angular-datatables.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/plugins/bootstrap/datatables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/css/colReorder.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/css/responsive.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/css/fixedColumns.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/angular-datatables/css/scroller.dataTables.min.css" rel="stylesheet" />
+
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/custom.css" rel="stylesheet" />
+    <link href="~/css/custom-datatable.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="image/png" href="~/favicon.ico" />
+
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        @await Html.PartialAsync("_SideBar")
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                @await Html.PartialAsync("_Navbar")
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <toaster-container></toaster-container>
+
+                    @RenderBody()
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+            @await Html.PartialAsync("_Footer")
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    @await Html.PartialAsync("_LogoutModal")
+
+    @await Html.PartialAsync("_Scripts")
+
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        $(function () {
+            $('div.container-fluid').bind("DOMSubtreeModified", function (e) {
+                $('.sidebar').css("max-height", $('body').height());
+            });
+        })
+    </script>
+</body>
+</html>

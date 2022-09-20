@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="coreCtrl">
+
+    <div class="card o-hidden border-0 shadow-lg p-2">
+        <div class="card-body p-0" block-ui="uiBlock" ng-init="onGetData()">
+            <!-- Nested Row within Card Body -->
+            @await Html.PartialAsync("_FormTitle")
+
+            @await Html.PartialAsync("_FormSearch")
+
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Thời gian truy cập </th>
+                        <th>Thời gian phản hồi </th>
+                        <th>Kết quả </th>
+                        <th>Phương thức </th>
+                        <th>Địa chỉ </th>
+                        <th>QueryString </th>
+                        <th>Dữ liệu gửi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="item in dataPage.Items">
+                        <td>
+                            {{$index + 1}}
+                        </td>
+                        <td>
+                            {{item.UserName}}
+                        </td>
+                        <td>
+                            {{item.RequestTime | date:'dd/MM/yyyy HH:mm'}}
+                        </td>
+                        <td>
+                            {{item.ResponseMillis}}
+                        </td>
+                        <td>
+                            {{item.StatusCode}}
+                        </td>
+                        <td>
+                            {{item.Method}}
+                        </td>
+                        <td>
+                            {{item.Path}}
+                        </td>
+                        <td>
+                            {{item.QueryString}}
+                        </td>
+                        <td>
+                            {{item.RequestBody}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            @await Html.PartialAsync("_FormPaging")
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_CatalogueScripts")
+}
+

@@ -1,0 +1,9 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-12 text-right">
+        @(Html.DevExtreme().Button().Text(Resources.ChangePassword_Cancel).UseSubmitBehavior(false).Width(100).OnClick("goBack")
+        )
+        @(Html.DevExtreme().Button().Text(Resources.ChangePassword_Submit).Type(ButtonType.Success).UseSubmitBehavior(true).ValidationGroup("change_password").Width(100)
+        )
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"]?.ToString();
+    var returnUrl = Context.Request.Query["returnUrl"];
+    if (string.IsNullOrEmpty(returnUrl))
+    {
+         returnUrl = Context.Request.Query["ReturnUrl"];
+    }
+}
+<script>
+    function goBack() {
+        var url = '@returnUrl';
+        if (url == null || url.length <= 0) {
+            url = '@Url.Action("Index", controllerName, new { Area = areaName })'
+        }
+        window.location.href = url;
+    }
+
+    function onUpdateItem(e) {
+        e.cancel = true;
+        window.location.href = '@Url.Action("Update" + controllerName, controllerName, new { Area = areaName })/' + e.key + '?ReturnUrl=' + window.location.pathname;
+    }
+
+    function toolbar_preparing(e) {
+        e.toolbarOptions.items.unshift({
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "plus",
+                hint: '@Html.Raw(Resources.Button_AddNew)',
+                onClick: function () {
+                    window.location.href = '@Url.Action("New"+ controllerName, controllerName , new { Area = areaName })?ReturnUrl=' + window.location.pathname;
+                }
+            }
+        })
+    }
+
+    function toolbar_preparing_hasdownload(e) {
+        e.toolbarOptions.items.unshift({
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "plus",
+                hint: "@Html.Raw(Resources.Button_AddNew)",
+                onClick: function () {
+                    window.location.href = '@Url.Action("New"+ controllerName, controllerName , new { Area = areaName })?ReturnUrl=' + window.location.pathname
+                }
+            }
+        },{
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "fa fa-download",
+                hint: "@Html.Raw(Resources.Button_Download)",
+                onClick: function () {
+                    window.location.href = '@Url.Action("DownloadTemplate", "Import" + controllerName, new { Area = "Import" })?ReturnUrl=' + window.location.pathname
+                }
+            }
+        },{
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "fa fa-upload",
+                hint: "@Html.Raw(Resources.Button_Import)",
+                onClick: function () {
+                    window.location.href = '@Url.Action("Index", "Import" + controllerName, new { Area = "Import" })?ReturnUrl=' + window.location.pathname
+                }
+            }
+        })
+    }
+
+    function onInitNewRow(e) {
+        e.data["Id"] = uuidv4();
+        e.data["Created"] = new Date();
+        e.data["CreatedBy"] = '@LoginContext.Instance.CurrentUser?.UserName';
+    }
+</script>

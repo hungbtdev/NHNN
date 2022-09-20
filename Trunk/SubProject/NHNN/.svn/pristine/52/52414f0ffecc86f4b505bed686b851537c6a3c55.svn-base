@@ -1,0 +1,41 @@
+﻿@model SearchReportCarDTO
+
+@await Component.InvokeAsync("FormTitle")
+
+@(Html.DevExtreme().DataGrid<UserPermitConfigDTO>().ID("gridContainer").DataSource(d => d.Mvc().LoadAction("Get").InsertAction("Insert").DeleteAction("Delete").UpdateAction("Update").Key("Id"))
+    .KeyExpr("Id")
+    .ShowBorders(true)
+    .ShowColumnLines(true)
+    .ShowRowLines(true)
+                .WordWrapEnabled(true)
+                .Columns(column =>
+                {
+
+                    column.AddFor(m => m.UserId).Width(200).Alignment(HorizontalAlignment.Center).Lookup(e => e.DataSource(d => d.Mvc().LoadAction("GetUsers").Key("Id")).DisplayExpr("Name").ValueExpr("Id").AllowClearing(true)).FormItem(f=>f.ColSpan(2));
+                    column.AddFor(m => m.DeptName).MinWidth(200).FormItem(f => f.ColSpan(2).Editor(e=>e.TextArea().Height(100)));
+                    column.AddFor(m => m.Created).Width(100).Format(Contants.DateFormat).FormItem(f => f.ColSpan(2).CssClass("d-none"));
+
+                }).OnInitNewRow("permitConfig.OnInitNewRow")
+                .Editing(e => e.AllowAdding(true).AllowDeleting(true).AllowUpdating(true).UseIcons(true).Mode(GridEditMode.Popup).Popup(p => p
+           .ShowTitle(false)
+           .ShowCloseButton(true)
+           .MaxWidth(500)
+           .Height(320)
+           .Position(pos => pos
+               .My(HorizontalAlignment.Center, VerticalAlignment.Top)
+               .At(HorizontalAlignment.Center, VerticalAlignment.Top)
+               .Of(new JS("window"))
+           )))
+)
+
+<script>
+    var permitConfig = {
+        OnInitNewRow: function (e) {
+            e.data["Id"] = uuidv4();
+            e.data["Created"] = new Date();
+            e.data["CreatedBy"] = '@LoginContext.Instance.CurrentUser.UserName';
+        }
+    }
+
+</script>
+

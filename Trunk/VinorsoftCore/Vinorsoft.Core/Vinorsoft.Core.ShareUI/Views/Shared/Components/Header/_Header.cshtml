@@ -1,0 +1,19 @@
+﻿@model HeaderDTO
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="@Model.AppName">
+<meta name="author" content="@Model.Author">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>@($"{Model.AppName} - {Model.Title}")</title>
+<link rel="shortcut icon" type="image/png" href="@Model.FaviIcon" />
+<link rel="stylesheet" href="~/css/vendor.css" asp-append-version="true" />
+@*<link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />*@
+@*<link rel="stylesheet" href="~/css/font-awesome/font-awesome.css" asp-append-version="true" />*@
+
+@*<script src="~/js/devextreme/jszip.min.js"></script>*@
+<script src="~/js/vendor.js" asp-append-version="true"></script>
+@*<script src="~/js/lodash.min.js" asp-append-version="true"></script>*@
+@*<script src="~/js/devextreme-intl.min.js" asp-append-version="true"></script>*@
+<script src="~/js/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.vi" asp-append-version="true"></script>
+@*<script src="~/js/devextreme/localization/dx.messages.vi.js" asp-append-version="true"></script>*@

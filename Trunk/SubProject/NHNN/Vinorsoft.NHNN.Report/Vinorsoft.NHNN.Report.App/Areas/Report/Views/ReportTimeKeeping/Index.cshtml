@@ -1,0 +1,244 @@
+﻿@model SearchReportTimeKeepingDTO
+
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var areaName = ViewContext.RouteData.Values["area"].ToString();
+}
+@await Component.InvokeAsync("FormTitle")
+
+@using (Html.BeginForm("Index", controllerName, FormMethod.Get, new { Area = areaName, id = "SearchForm" }))
+{
+    @(Html.DevExtreme().Form<SearchReportTimeKeepingDTO>
+                                                                                            ().ID("form").ColCount(3).Items(items =>
+                                                                                            {
+                                                                                                items.AddEmpty();
+                                                                                                items.AddGroup().ColCount(3).Items(groupItems =>
+                                                                                                {
+                                                                                                    groupItems.AddSimpleFor(m => m.Month).Editor(e => e.NumberBox().Max(12).Width(100));
+                                                                                                    groupItems.AddSimpleFor(m => m.Year).Editor(e => e.NumberBox().Max(9999).Width(100));
+                                                                                                    groupItems.AddSimple().Template(@<text>
+        @(Html.DevExtreme().Button().Icon("fa fa-search").Text(Vinorsoft_NHNN_Report_DevEx_App_Resource.Button_Submit).Type(ButtonType.Normal).UseSubmitBehavior(true).ValidationGroup("User").Width(100)
+        )
+    </text>);
+                                                                                                                                                                                            });
+                                                                                                                                                                                            items.AddEmpty();
+
+                                                                                                                                                                                        }).ValidationGroup("User").FormData(Model)
+    )
+}
+
+
+
+
+@(Html.DevExtreme().DataGrid<Vinorsoft.NHNN.Report.DTO.ReportDTO.TimeKeepingRowDTO>
+                                                ().ID("gridContainer").DataSource(d => d.Mvc().Controller(controllerName).Area(areaName).LoadAction("Get").LoadParams(new { month = Model.Month, year = Model.Year }).Key("EmployeeNumber"))
+                                                .WordWrapEnabled(true)
+                                                .Columns(column =>
+                                                {
+
+                                                    column.AddFor(m => m.EmployeeNumber).Width(80).Alignment(HorizontalAlignment.Center).Fixed(true);
+                                                    column.AddFor(m => m.FullName).Width(150).Fixed(true);
+                                                    column.AddFor(m => m.ParentDeptName).Width(150).AllowFiltering(false).AllowHeaderFiltering(true);
+                                                    column.AddFor(m => m.DeptName).GroupIndex(0);
+                                                    column.AddFor(m => m.JobtitleName).Width(150).AllowFiltering(false).AllowHeaderFiltering(true);
+                                                    column.Add().CssClass(Model.GetHighLightCss(0)).Caption("1").Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._1.Summary).CssClass(Model.GetHighLightCss(0)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(0)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("2").CssClass(Model.GetHighLightCss(1)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._2.Summary).CssClass(Model.GetHighLightCss(1)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(1)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("3").CssClass(Model.GetHighLightCss(2)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._3.Summary).CssClass(Model.GetHighLightCss(2)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(2)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("4").CssClass(Model.GetHighLightCss(3)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._4.Summary).CssClass(Model.GetHighLightCss(3)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(3)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("5").CssClass(Model.GetHighLightCss(4)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._5.Summary).CssClass(Model.GetHighLightCss(4)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(4)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("6").CssClass(Model.GetHighLightCss(5)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._6.Summary).CssClass(Model.GetHighLightCss(5)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(5)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("7").CssClass(Model.GetHighLightCss(6)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._7.Summary).CssClass(Model.GetHighLightCss(6)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(6)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("8").CssClass(Model.GetHighLightCss(7)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._8.Summary).CssClass(Model.GetHighLightCss(7)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(7)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("9").CssClass(Model.GetHighLightCss(8)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._9.Summary).CssClass(Model.GetHighLightCss(8)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(8)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("10").CssClass(Model.GetHighLightCss(9)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._10.Summary).CssClass(Model.GetHighLightCss(9)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(9)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("11").CssClass(Model.GetHighLightCss(10)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._11.Summary).CssClass(Model.GetHighLightCss(10)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(10)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("12").CssClass(Model.GetHighLightCss(11)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._12.Summary).CssClass(Model.GetHighLightCss(11)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(11)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("13").CssClass(Model.GetHighLightCss(12)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._13.Summary).CssClass(Model.GetHighLightCss(12)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(12)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("14").CssClass(Model.GetHighLightCss(13)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._14.Summary).CssClass(Model.GetHighLightCss(13)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(13)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+
+                                                    column.Add().Caption("15").CssClass(Model.GetHighLightCss(14)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._15.Summary).CssClass(Model.GetHighLightCss(14)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(14)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+
+                                                    column.Add().Caption("16").CssClass(Model.GetHighLightCss(15)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._16.Summary).CssClass(Model.GetHighLightCss(15)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(15)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+
+                                                    column.Add().Caption("17").CssClass(Model.GetHighLightCss(16)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._17.Summary).CssClass(Model.GetHighLightCss(16)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(16)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+
+                                                    column.Add().Caption("18").CssClass(Model.GetHighLightCss(17)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._18.Summary).CssClass(Model.GetHighLightCss(17)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(17)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("19").CssClass(Model.GetHighLightCss(18)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._19.Summary).CssClass(Model.GetHighLightCss(18)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(18)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("20").CssClass(Model.GetHighLightCss(19)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._20.Summary).CssClass(Model.GetHighLightCss(19)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(19)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("21").CssClass(Model.GetHighLightCss(20)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._21.Summary).CssClass(Model.GetHighLightCss(20)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(20)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("22").CssClass(Model.GetHighLightCss(21)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._22.Summary).CssClass(Model.GetHighLightCss(21)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(21)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("23").CssClass(Model.GetHighLightCss(22)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._23.Summary).CssClass(Model.GetHighLightCss(22)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(22)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("24").CssClass(Model.GetHighLightCss(23)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._24.Summary).CssClass(Model.GetHighLightCss(23)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(23)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("25").CssClass(Model.GetHighLightCss(24)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._25.Summary).CssClass(Model.GetHighLightCss(24)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(24)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("26").CssClass(Model.GetHighLightCss(25)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._26.Summary).CssClass(Model.GetHighLightCss(25)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(25)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("27").CssClass(Model.GetHighLightCss(26)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._27.Summary).CssClass(Model.GetHighLightCss(26)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(26)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("28").CssClass(Model.GetHighLightCss(27)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._28.Summary).CssClass(Model.GetHighLightCss(27)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(27)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).Alignment(HorizontalAlignment.Center).Visible(Model.Show_28).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("29").CssClass(Model.GetHighLightCss(28)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._29.Summary).CssClass(Model.GetHighLightCss(28)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(28)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).Alignment(HorizontalAlignment.Center).Visible(Model.Show_29).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("30").CssClass(Model.GetHighLightCss(29)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._30.Summary).CssClass(Model.GetHighLightCss(29)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(29)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).Alignment(HorizontalAlignment.Center).Visible(Model.Show_30).AllowSorting(false).AllowSorting(false);
+
+                                                    column.Add().Caption("31").CssClass(Model.GetHighLightCss(31)).Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m._31.Summary).CssClass(Model.GetHighLightCss(31)).Width(90).Alignment(HorizontalAlignment.Center).Caption(Model.GetDayOfWeek(30)).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false).AllowSorting(false);
+                                                    }).Width(60).Alignment(HorizontalAlignment.Center).Visible(Model.Show_31).AllowSorting(false).AllowSorting(false);
+
+
+                                                    column.Add().Caption("(Giờ:Phút)").Columns(a =>
+                                                    {
+                                                        a.AddFor(m => m.WD_Total).Width(100).Caption("Tổng").Alignment(HorizontalAlignment.Center).AllowHeaderFiltering(false).AllowFiltering(false).AllowSorting(false);
+                                                    }).Width(100).AllowSorting(false);
+
+                                                }).ToDefaultOption().Editing(e => e.AllowAdding(false).AllowDeleting(false).AllowUpdating(false))
+                                                .Grouping(grouping => grouping.AutoExpandAll(true))
+                                                .GroupPanel(groupPanel => groupPanel.Visible(true))
+                                                .SortByGroupSummaryInfo(i => i.Add().SummaryItem("count"))
+                                                .Summary(s => s.TotalItems(items =>
+                                                {
+                                                    items.AddFor(m => m.EmployeeNumber).SummaryType(SummaryType.Count).DisplayFormat(Vinorsoft_NHNN_Report_DevEx_App_Resource.Sumary_Total + " {0}");
+                                                })
+                                                .GroupItems(items =>
+                                                {
+                                                    items.AddFor(m => m.WD_Total_Value)
+                                                    .SummaryType(SummaryType.Sum)
+                                                    .CustomizeText(
+                                                        @<text>
+                                                            function(data) { return "Tổng số giờ: " + formatTotolHour(data.value); }
+                                                        </text>
+                                                    ).AlignByColumn(true);
+                                                }
+                                                ))
+                                                .Export(e => e.Enabled(true).AllowExportSelectedData(true).FileName($"{Vinorsoft_NHNN_Report_DevEx_App_Resource.Export_TimeKeeping_FileName}__Tháng {Model.Month}-{Model.Year}"))
+                                                .OnFileSaving("OnFileSaving")
+                                                .OnToolbarPreparing("OnToolbarPreparing")
+)
+
+@await Html.PartialAsync("_ProcessExcelScripts")
+<script>
+
+    function viewAccessHistory(e) {
+        window.location.href = '@Url.Action("CheckInOutHistory", controllerName, new { Area = areaName })/' + e.row.data.IdUser;
+    }
+    function formatTotolHour(data) {
+        return `${String(parseInt(data / 60)).padStart(2, '0')}:${String(data % 60).padStart(2, '0')}`;
+    }
+</script>
+
+

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Vinorsoft.Core.DevEx.DTO/1.0.0": {
+        "dependencies": {
+          "Vinorsoft.Core.Domain": "1.0.0.0"
+        },
+        "runtime": {
+          "Vinorsoft.Core.DevEx.DTO.dll": {}
+        }
+      },
+      "Vinorsoft.Core.Domain/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Vinorsoft.Core.DevEx.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.Domain/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="block-ui-container">
+    <div class="block-ui-overlay"></div>
+    <div class="block-ui-message-container">
+        <div class="block-ui-message">
+            <img src="../../../css/images/loading.gif" />
+        </div>
+    </div>
+</div>
