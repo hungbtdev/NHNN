@@ -1,5 +1,6 @@
 ﻿<script>
     var print = false;
+    var excel = true;
     function OnToolbarPreparing(e) {
         var dataGrid = e.component;
         e.toolbarOptions.items.unshift({
@@ -7,24 +8,24 @@
             widget: "dxButton",
             options: {
                 icon: "print",
-                onClick: function() {
+                onClick: function () {
+                    excel = true;
                     print = true;
                     dataGrid.exportToExcel(false);
                 }
             }
-        });
-        e.toolbarOptions.items.unshift({
+        },{
             location: "after",
             widget: "dxButton",
             options: {
                 icon: "doc",
                 onClick: function () {
                     print = true;
+                    excel = false;
                     dataGrid.exportToExcel(false);
                 }
             }
         });
-        
     }
 
     function customizeExportData(columns, rows) {
@@ -202,12 +203,13 @@
         });
     }
     function OnFileSaving(data) {
-        uploadData(data);
-        data.cancel = true;
-    }
+        if (excel == true) {
+            uploadData(data);
+        }
+        else {
+            uploadDataText(data);
+        }
 
-    function OnFileSavingText(data) {
-        uploadDataText(data);
         data.cancel = true;
     }
 
