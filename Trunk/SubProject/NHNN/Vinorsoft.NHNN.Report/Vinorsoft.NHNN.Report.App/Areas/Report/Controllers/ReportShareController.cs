@@ -287,6 +287,79 @@ namespace Vinorsoft.NHNN.Report.App.Areas.Report.Controllers
             }
         }
 
+
+
+        [HttpPost]
+        public virtual IActionResult ProcessText([FromForm] ProcessExcelDTO processText)
+        {
+            var file = Request.Form.Files.FirstOrDefault();
+            using (var ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                using (var package = new ExcelPackage(ms))
+                {
+                    var ws = package.Workbook.Worksheets.FirstOrDefault();
+                    using (var package2 = new ExcelPackage())
+                    {
+                        var ws2 = package2.Workbook.Worksheets.Add("sheet1", ws);
+
+                        ws2.View.UnFreezePanes();
+
+                        ws2.Column(1).Width = 8;
+                        ws2.Column(2).Width = 20;
+                        IList<string> removeTitle = new string[] { "Phòng ban", "Đơn vị", "Chức vụ" };
+                        ws2 = RemoveColumByName(ws2, removeTitle);
+
+                        ws2 = PrintFormat(ws2);
+
+                        ws2 = WeekendFormat(ws2);
+
+                        ws2 = TemplateFormat(ws2);
+
+                        Request.Form.TryGetValue("fname", out StringValues title);
+                        if (processText.HideVuPhong)
+                        {
+                            ws2 = AddHeader(ws2, title.ToString().ToUpper());
+                        }
+                        else
+                        {
+                            ws2 = AddHeader(ws2, title.ToString().ToUpper(), processText.Vu, processText.Phong);
+                        }
+
+                        int countCol = ws2.Dimension.Columns;
+                        int countRow = ws2.Dimension.Rows;
+
+                        var bytes = package2.GetAsByteArray();
+                        var path = Path.Combine(environment.WebRootPath, "temp");
+                        if (!Directory.Exists(path))
+                            Directory.CreateDirectory(path);
+                        var filename = title.ToString() + ".xlsx";
+
+                        if (processText.IsPrint)
+                        {
+                            filename = title.ToString() + ".pdf";
+                            using (DevExpress.Spreadsheet.IWorkbook workbook = new DevExpress.Spreadsheet.Workbook())
+                            {
+                                workbook.LoadDocument(bytes);
+                                workbook.ExportToPdf(path + $"/{filename}");
+                            }
+                        }
+                        else
+                        {
+                            System.IO.File.WriteAllBytes(path + $"/{filename}", bytes);
+                        }
+
+                        return Json(new
+                        {
+                            filename = $"{filename}",
+                            url = $"/ReportShare/ViewPdf?filename={filename}",
+                            processText.IsPrint
+                        });
+                    }
+
+                }
+            }
+        }
         [HttpGet]
         public IActionResult Download(string filename, string orgname)
         {

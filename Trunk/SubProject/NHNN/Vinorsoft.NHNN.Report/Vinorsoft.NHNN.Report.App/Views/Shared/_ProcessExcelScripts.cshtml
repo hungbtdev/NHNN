@@ -13,6 +13,18 @@
                 }
             }
         });
+        e.toolbarOptions.items.unshift({
+            location: "after",
+            widget: "dxButton",
+            options: {
+                icon: "doc",
+                onClick: function () {
+                    print = true;
+                    dataGrid.exportToExcel(false);
+                }
+            }
+        });
+        
     }
 
     function customizeExportData(columns, rows) {
@@ -119,8 +131,84 @@
         });
     }
 
+    function uploadDataText(data) {
+        var formData = new FormData();
+        formData.append('fname', data.fileName);
+        formData.append('data', data.data);
+        formData.append('IsPrint', print);
+        formData.append('ReportTitle', data.fileName);
+        if (typeof (hideVuPhong) != "undefined") {
+            formData.append('HideVuPhong', hideVuPhong);
+        }
+        var vuValue = "@Html.Raw(Vinorsoft_NHNN_Report_DevEx_App_Resource.All_Value)";
+        var phongValue = "@Html.Raw(Vinorsoft_NHNN_Report_DevEx_App_Resource.All_Value)";
+
+        var filters = $("#gridContainer").dxDataGrid('instance').getCombinedFilter();
+        if (filters) {
+
+            var _temp = [];
+            var _tempUCuc = getByKey(filters, "User.Cuc");
+            var _tempCuc = getByKey(filters, "Cuc");
+            if (_tempUCuc) {
+                _temp = _temp.concat(_tempUCuc);
+            }
+            if (_tempCuc) {
+                _temp = _temp.concat(_tempCuc);
+            }
+
+            _temp = _temp.filter(e => e && e != "Cuc" && e != "User.Cuc" && e != "User.Phong" && e != "Phong" && e != "=");
+
+            if (_temp.length > 0) {
+                vuValue = _temp.filter(e => e).join();
+            }
+
+            var tempUPhong = getByKey(filters, "User.Phong");
+            var tempPhong = getByKey(filters, "Phong");
+            _temp = [];
+
+
+            if (tempUPhong) {
+                _temp = _temp.concat(tempUPhong);
+            }
+            if (tempPhong) {
+                _temp = _temp.concat(tempPhong);
+            }
+
+            _temp = _temp.filter(e => e && e != "Cuc" && e != "User.Cuc" && e != "User.Phong" && e != "Phong" && e != "=");
+
+            if (_temp.length > 0) {
+                phongValue = _temp.filter(e => e).join();
+            }
+        }
+
+        formData.append('Vu', vuValue);
+        formData.append('Phong', phongValue);
+
+        print = false;
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ProcessText")',
+            data: formData,
+            processData: false,
+            contentType: false,
+            responseType: 'blob'
+        }).done(function(reponse) {
+            if (!reponse.IsPrint) {
+                window.location.href = '@Url.Action("Download")?filename=' + reponse.filename + '&orgname=' + data.fileName;
+            }
+            else {
+                window.open(reponse.url, '_blank');
+            }
+        });
+    }
     function OnFileSaving(data) {
         uploadData(data);
         data.cancel = true;
     }
+
+    function OnFileSavingText(data) {
+        uploadDataText(data);
+        data.cancel = true;
+    }
+
 </script>

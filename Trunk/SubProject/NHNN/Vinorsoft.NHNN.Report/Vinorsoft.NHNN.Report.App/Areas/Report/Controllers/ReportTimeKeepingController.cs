@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Text;
 using AutoMapper;
 using DevExpress.Office.Utils;
 using DevExtreme.AspNet.Data;
@@ -285,5 +286,136 @@ namespace Vinorsoft.NHNN.Report.App.Areas.Report.Controllers
             }
         }
 
+
+        public override IActionResult ProcessText([FromForm] ProcessExcelDTO processText)
+        {
+            var file = Request.Form.Files.FirstOrDefault();
+            using (var ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                using (var package = new ExcelPackage(ms))
+                {
+                    var ws = package.Workbook.Worksheets.FirstOrDefault();
+                    using (var package2 = new ExcelPackage())
+                    {
+                        var ws2 = package2.Workbook.Worksheets.Add("sheet1", ws);
+
+                        ws2.View.UnFreezePanes();
+
+                        ws2.Column(1).Width = 8;
+                        ws2.Column(2).Width = 20;
+                        //IList<string> removeTitle = new string[] { "Phòng ban", "Đơn vị", "Chức vụ" };
+                        //ws2 = RemoveColumByName(ws2, removeTitle);
+
+                        ws2 = PrintFormat(ws2);
+
+                        ws2 = WeekendFormat(ws2);
+
+                        ws2 = TemplateFormat(ws2);
+                        try
+                        {
+                            var path = Path.Combine(environment.WebRootPath, "temp");
+
+                            Request.Form.TryGetValue("fname", out StringValues title);
+                            if (!Directory.Exists(path))
+                                Directory.Delete(path);
+                                Directory.CreateDirectory(path);
+                            var filename = title.ToString() + ".txt";
+
+                            using (StreamWriter outputFile = new StreamWriter(Path.Combine(path, filename), true))
+                            {
+                                if (processText.HideVuPhong)
+                                {
+                                    ws2 = AddHeader(ws2, title.ToString().ToUpper());
+                                }
+                                else
+                                {
+                                    ws2 = AddHeader(ws2, title.ToString().ToUpper(), processText.Vu, processText.Phong);
+                                }
+
+                                int countCol = ws2.Dimension.Columns;
+                                int countRow = ws2.Dimension.Rows;
+
+                                for (int i = 0; i <= countCol; i++)
+                                {
+                                    if (i == 0)
+                                    {
+                                        outputFile.Write("Mã CC    |");
+                                    }
+                                    else if (i == 1)
+                                    {
+                                        outputFile.Write("Họ và tên         |");
+                                    }
+                                    //else if (i == 2)
+                                    //{
+                                    //    outputFile.Write("Đơn vị            |");
+                                    //}
+                                    //else if (i == 3)
+                                    //{
+                                    //    outputFile.Write("Chức vụ            |");
+                                    //}
+                                    else if (i < countCol)
+                                    {
+                                        outputFile.Write( (i -3).ToString() + " |");
+                                    }
+                                    else
+                                    {
+                                        outputFile.Write((i - 3).ToString() + "    |\n");
+                                    }
+
+
+                                }
+                                for (int i = 5; i <= countRow; i++)
+                                {
+                                    if (ws2.Cells[i, 1].Value != null && (ws2.Cells[i, 1].Value.ToString()).Contains(@"Phòng ban: "))
+                                    {
+                                        ws2.Row(i).Merged = true;
+                                        ws2.Row(i).Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                    }
+                                    for (int j = 1; j <= countCol; j++)
+                                    {
+                                        if (i > 5)
+                                        {
+                                            string content = "0";
+                                            if (ws2.Cells[i, j].Value != null)
+                                            {
+                                                content = ws2.Cells[i, j].Value.ToString();
+                                            }
+                                            if (j == countCol)
+                                            {
+                                                outputFile.Write(content + "    |\n");
+                                            }
+                                            else
+                                            {
+                                                outputFile.Write(content + "    |");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            return Json(new
+                            {
+                                filename = $"{filename}",
+                                url = $"/ReportShare/ViewPdf?filename={filename}",
+                                processText.IsPrint
+                            });
+                        }
+                        catch (Exception Ex)
+                        {
+                            Console.WriteLine(Ex.ToString());
+                            return Json(new
+                            {
+
+                            });
+                        }
+                    }
+                   
+                }
+                
+         
+            }
+        }
     }
 }

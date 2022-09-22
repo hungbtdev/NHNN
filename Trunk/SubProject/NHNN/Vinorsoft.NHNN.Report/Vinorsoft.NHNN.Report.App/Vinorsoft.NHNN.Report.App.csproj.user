@@ -16,6 +16,9 @@
     <ShowAllFiles>false</ShowAllFiles>
     <NameOfLastUsedPublishProfile>E:\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.App\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
     <DismissedDevExtremeVersion>22.1.5</DismissedDevExtremeVersion>
+    <DevExtremeCreateAsPartial>False</DevExtremeCreateAsPartial>
+    <DevExtremeUseLayout>True</DevExtremeUseLayout>
+    <DevExtremeSelectedDataContextName>NHNNDbContext %28Vinorsoft.NHNN.Report.Service%29</DevExtremeSelectedDataContextName>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Update="Vinorsoft.NHNN.Report.DevEx.App.Resource.resx">
