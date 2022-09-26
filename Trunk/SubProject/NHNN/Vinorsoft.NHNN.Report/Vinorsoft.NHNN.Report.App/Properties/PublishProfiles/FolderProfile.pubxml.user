@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\NHNN\Trunk\SubProject\NHNN\Vinorsoft.NHNN.Report\Vinorsoft.NHNN.Report.App\bin\Release\publish\</_PublishTargetUrl>
+    <History>True|2022-09-23T08:40:21.3370868Z;True|2022-09-23T15:39:41.2467776+07:00;True|2022-09-23T15:30:00.3685590+07:00;True|2022-09-23T15:03:13.3323243+07:00;True|2022-09-23T14:59:38.5530582+07:00;True|2022-09-23T14:23:57.6502148+07:00;True|2022-09-22T16:03:10.4323488+07:00;True|2022-09-20T08:08:13.1025233+07:00;True|2022-09-19T14:12:05.1541926+07:00;True|2022-09-19T14:07:45.4723349+07:00;True|2022-09-18T12:10:38.9007491+07:00;</History>
+  </PropertyGroup>
+</Project>

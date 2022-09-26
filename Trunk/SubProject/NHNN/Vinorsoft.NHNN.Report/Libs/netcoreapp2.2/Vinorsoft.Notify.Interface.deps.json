@@ -1,0 +1,278 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "42d75ebf82db1b7909104a3125eb2607c11ac1f7"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Vinorsoft.Notify.Interface/1.0.0": {
+        "dependencies": {
+          "FirebaseAdmin": "1.11.0",
+          "Vinorsoft.Core.Domain": "1.0.0.0",
+          "Vinorsoft.Core.Entities": "1.0.0.0",
+          "Vinorsoft.Core.Interface": "1.0.0.0",
+          "Vinorsoft.Notify.Entities": "1.0.0.0"
+        },
+        "runtime": {
+          "Vinorsoft.Notify.Interface.dll": {}
+        }
+      },
+      "FirebaseAdmin/1.11.0": {
+        "dependencies": {
+          "Google.Api.Gax": "2.7.0",
+          "Google.Api.Gax.Rest": "2.7.0",
+          "Google.Apis.Auth": "1.40.0",
+          "System.Collections.Immutable": "1.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FirebaseAdmin.dll": {
+            "assemblyVersion": "1.11.0.0",
+            "fileVersion": "1.11.0.0"
+          }
+        }
+      },
+      "Google.Api.Gax/2.7.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.Interactive.Async": "3.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.dll": {
+            "assemblyVersion": "2.7.0.0",
+            "fileVersion": "2.7.0.0"
+          }
+        }
+      },
+      "Google.Api.Gax.Rest/2.7.0": {
+        "dependencies": {
+          "Google.Api.Gax": "2.7.0",
+          "Google.Apis.Auth": "1.40.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
+            "assemblyVersion": "2.7.0.0",
+            "fileVersion": "2.7.0.0"
+          }
+        }
+      },
+      "Google.Apis/1.40.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.40.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.40.0.0",
+            "fileVersion": "1.40.0.0"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.40.0": {
+        "dependencies": {
+          "Google.Apis": "1.40.0",
+          "Google.Apis.Core": "1.40.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.40.0.0",
+            "fileVersion": "1.40.0.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.40.0.0",
+            "fileVersion": "1.40.0.0"
+          }
+        }
+      },
+      "Google.Apis.Core/1.40.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.40.0.0",
+            "fileVersion": "1.40.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
+        }
+      },
+      "System.Collections.Immutable/1.5.0": {},
+      "System.Interactive.Async/3.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Interactive.Async.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.702"
+          }
+        }
+      },
+      "Vinorsoft.Core.Domain/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Core.Entities/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Core.Interface/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Interface.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Notify.Entities/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Notify.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Core.DTO/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.DTO.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Core.Resx/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Resx.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Vinorsoft.Core.Utils/1.0.0.0": {
+        "runtime": {
+          "Vinorsoft.Core.Utils.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Vinorsoft.Notify.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FirebaseAdmin/1.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+VH7OR1j9mUzT26liM9xsAH/gzaAZpIqIjgkqH4o3FbowSNPNPFoorOzw03xtUOn65DVaWJewlvBtPSq6b1KMA==",
+      "path": "firebaseadmin/1.11.0",
+      "hashPath": "firebaseadmin.1.11.0.nupkg.sha512"
+    },
+    "Google.Api.Gax/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HDZFdXYrAUukdQnF3gMl9oAazq1oHWlbbNoLJ7aYIJFPlznmbsUE+VD+tn5S/4qYJat7jUNrraUOX4meoTE4Qw==",
+      "path": "google.api.gax/2.7.0",
+      "hashPath": "google.api.gax.2.7.0.nupkg.sha512"
+    },
+    "Google.Api.Gax.Rest/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KtJKFJ40BzmceVwB/MyhtjAq3Y9+9Wxbe9Vlp050x4NAfP6zapcrhSDbeHV6pY/KoHIGvOI7wkgql543X/LZNg==",
+      "path": "google.api.gax.rest/2.7.0",
+      "hashPath": "google.api.gax.rest.2.7.0.nupkg.sha512"
+    },
+    "Google.Apis/1.40.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+5wjbYtte08ZZlJKyxfRiMAf27aqSTnvBjE3Tf31uyRqS5AVqsLw6ss4qi/51x+ZFT+wiZRsfWPlLY8uAeTF9A==",
+      "path": "google.apis/1.40.0",
+      "hashPath": "google.apis.1.40.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.40.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P1l8gncejwYDdGa2ycMgq7/P3Gb441Jls/7jaxiOUlHWj0ImDzS0iJbR3g1tbLxyAKYfqJ3t5Vu921S32l0MjA==",
+      "path": "google.apis.auth/1.40.0",
+      "hashPath": "google.apis.auth.1.40.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.40.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ys3ENDOBtB9brBx72aR4B3c9kfwUkisB1CSmcs4XHDpyOIXtdeAXcpAEz1hzDdM5+6jdND7d4eSVtg7B9wksYw==",
+      "path": "google.apis.core/1.40.0",
+      "hashPath": "google.apis.core.1.40.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "System.Collections.Immutable/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
+      "path": "system.collections.immutable/1.5.0",
+      "hashPath": "system.collections.immutable.1.5.0.nupkg.sha512"
+    },
+    "System.Interactive.Async/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
+      "path": "system.interactive.async/3.2.0",
+      "hashPath": "system.interactive.async.3.2.0.nupkg.sha512"
+    },
+    "Vinorsoft.Core.Domain/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.Entities/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.Interface/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Notify.Entities/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.DTO/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.Resx/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Core.Utils/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
