@@ -1,0 +1,8 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Domain.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Domain.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Domain.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Domain\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Domain.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Domain\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Domain\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Domain.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Domain\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Domain.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Domain\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Domain.pdb

@@ -1,0 +1,8 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Notify.Entities.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Notify.Entities.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Notify.Entities.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Notify.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Notify.Entities.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Notify.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Notify.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Notify.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Notify.Entities.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Notify.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Notify.Entities.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Notify.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Notify.Entities.pdb

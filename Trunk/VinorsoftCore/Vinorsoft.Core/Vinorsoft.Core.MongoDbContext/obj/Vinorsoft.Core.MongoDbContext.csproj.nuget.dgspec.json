@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.MongoDbContext\\Vinorsoft.Core.MongoDbContext.csproj": {}
+  },
+  "projects": {
+    "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\Vinorsoft.Core.Mongo.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\Vinorsoft.Core.Mongo.Interface.csproj",
+        "projectName": "Vinorsoft.Core.Mongo.Interface",
+        "projectPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\Vinorsoft.Core.Mongo.Interface.csproj",
+        "packagesPath": "C:\\Users\\hungb\\.nuget\\packages\\",
+        "outputPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\NuGet.Config",
+          "C:\\Users\\hungb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 19.2\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.MongoDbContext\\Vinorsoft.Core.MongoDbContext.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.MongoDbContext\\Vinorsoft.Core.MongoDbContext.csproj",
+        "projectName": "Vinorsoft.Core.MongoDbContext",
+        "projectPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.MongoDbContext\\Vinorsoft.Core.MongoDbContext.csproj",
+        "packagesPath": "C:\\Users\\hungb\\.nuget\\packages\\",
+        "outputPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.MongoDbContext\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\NuGet.Config",
+          "C:\\Users\\hungb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 19.2\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\Vinorsoft.Core.Mongo.Interface.csproj": {
+                "projectPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.Mongo.Interface\\Vinorsoft.Core.Mongo.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

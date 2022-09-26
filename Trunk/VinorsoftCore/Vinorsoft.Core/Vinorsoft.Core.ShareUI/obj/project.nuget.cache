@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EvSjX10F4CID5/4pr4vwanRshokJM0kdZsePiS2/LQvLh9ywcVkDeEbeEGHbKMh3CJdT5RFDT0uyDfbTPfudNA==",
+  "dgSpecHash": "3Ij+ncLIPC8Jn83/PWfyfAuPB2+C+i5WLAo1BEp9sOwYgOufT0qDlaJfeQL5t9/7RrXZJD4t++YgHuuRp6SKYA==",
   "success": true,
-  "projectFilePath": "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
+  "projectFilePath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hungb\\.nuget\\packages\\devextreme.aspnet.core\\20.1.3\\devextreme.aspnet.core.20.1.3.nupkg.sha512",
+    "C:\\Users\\hungb\\.nuget\\packages\\devextreme.aspnet.core\\19.2.6\\devextreme.aspnet.core.19.2.6.nupkg.sha512",
     "C:\\Users\\hungb\\.nuget\\packages\\devextreme.aspnet.data\\2.6.1\\devextreme.aspnet.data.2.6.1.nupkg.sha512",
     "C:\\Users\\hungb\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\hungb\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -166,16 +166,5 @@
     "C:\\Users\\hungb\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\hungb\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Vinorsoft.Core.ShareUI depends on DevExtreme.AspNet.Core (>= 19.2.6) but DevExtreme.AspNet.Core 19.2.6 was not found. An approximate best match of DevExtreme.AspNet.Core 20.1.3 was resolved.",
-      "libraryId": "DevExtreme.AspNet.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  "logs": []
 }

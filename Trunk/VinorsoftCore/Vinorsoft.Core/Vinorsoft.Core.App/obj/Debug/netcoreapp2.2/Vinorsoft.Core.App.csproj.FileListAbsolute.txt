@@ -1,0 +1,17 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\NuGet.config
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\web.config
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.App.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.App.runtimeconfig.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.App.runtimeconfig.dev.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.App.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.App.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.RazorAssemblyInfo.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.RazorAssemblyInfo.cs
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.RazorTargetAssemblyInfo.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.csproj.CopyComplete
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.App\obj\Debug\netcoreapp2.2\Vinorsoft.Core.App.genruntimeconfig.cache

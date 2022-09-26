@@ -1,0 +1,9 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Entities.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Entities.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Entities.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.csproj.CopyComplete
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Entities\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Entities.pdb

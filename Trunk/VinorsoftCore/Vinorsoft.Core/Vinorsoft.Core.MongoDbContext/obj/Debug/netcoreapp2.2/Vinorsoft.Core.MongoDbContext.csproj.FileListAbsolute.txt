@@ -1,0 +1,11 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\bin\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\bin\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\bin\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\bin\Debug\netcoreapp2.2\Vinorsoft.Core.Mongo.Interface.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\bin\Debug\netcoreapp2.2\Vinorsoft.Core.Mongo.Interface.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.csproj.CopyComplete
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.MongoDbContext\obj\Debug\netcoreapp2.2\Vinorsoft.Core.MongoDbContext.pdb

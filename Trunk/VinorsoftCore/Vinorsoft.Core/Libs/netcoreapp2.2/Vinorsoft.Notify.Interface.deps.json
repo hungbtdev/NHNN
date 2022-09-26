@@ -9,9 +9,10 @@
       "Vinorsoft.Notify.Interface/1.0.0": {
         "dependencies": {
           "FirebaseAdmin": "1.11.0",
-          "Vinorsoft.Core.Domain": "1.1.7573.29469",
-          "Vinorsoft.Core.Entities": "1.1.7573.29472",
-          "Vinorsoft.Notify.Entities": "1.1.7573.29470"
+          "Vinorsoft.Core.Domain": "1.1.8301.24140",
+          "Vinorsoft.Core.Entities": "1.1.7628.30311",
+          "Vinorsoft.Core.Interface": "1.1.8301.24139",
+          "Vinorsoft.Notify.Entities": "1.1.8301.24139"
         },
         "runtime": {
           "Vinorsoft.Notify.Interface.dll": {}
@@ -111,27 +112,35 @@
           }
         }
       },
-      "Vinorsoft.Core.Domain/1.1.7573.29469": {
+      "Vinorsoft.Core.Domain/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.Domain.dll": {
-            "assemblyVersion": "1.1.7573.29469",
-            "fileVersion": "1.1.7573.29469"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.Entities/1.1.7573.29472": {
+      "Vinorsoft.Core.Entities/1.1.7628.30311": {
         "runtime": {
           "Vinorsoft.Core.Entities.dll": {
-            "assemblyVersion": "1.1.7573.29472",
-            "fileVersion": "1.1.7573.29472"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Notify.Entities/1.1.7573.29470": {
+      "Vinorsoft.Core.Interface/1.1.8301.24139": {
+        "runtime": {
+          "Vinorsoft.Core.Interface.dll": {
+            "assemblyVersion": "1.1.8301.24139",
+            "fileVersion": "1.1.8301.24139"
+          }
+        }
+      },
+      "Vinorsoft.Notify.Entities/1.1.8301.24139": {
         "runtime": {
           "Vinorsoft.Notify.Entities.dll": {
-            "assemblyVersion": "1.1.7573.29470",
-            "fileVersion": "1.1.7573.29470"
+            "assemblyVersion": "1.1.8301.24139",
+            "fileVersion": "1.1.8301.24139"
           }
         }
       }
@@ -206,17 +215,22 @@
       "path": "system.interactive.async/3.2.0",
       "hashPath": "system.interactive.async.3.2.0.nupkg.sha512"
     },
-    "Vinorsoft.Core.Domain/1.1.7573.29469": {
+    "Vinorsoft.Core.Domain/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Entities/1.1.7573.29472": {
+    "Vinorsoft.Core.Entities/1.1.7628.30311": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Notify.Entities/1.1.7573.29470": {
+    "Vinorsoft.Core.Interface/1.1.8301.24139": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vinorsoft.Notify.Entities/1.1.8301.24139": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

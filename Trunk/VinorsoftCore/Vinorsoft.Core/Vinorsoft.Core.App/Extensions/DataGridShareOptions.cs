@@ -22,11 +22,11 @@ namespace DevExtreme.AspNet.Mvc
                                                         .Height(600)
                                                         .ShowBorders(true)
                                                         .ColumnAutoWidth(true)
-                                                        .Paging(paging =>  paging.PageSize(20))
+                                                        .Paging(paging =>  paging.PageSize(10))
                                                         .Pager(pager =>
                                                         {
                                                             pager.ShowPageSizeSelector(true);
-                                                            pager.AllowedPageSizes(new[] { 20, 25, 50, 100 });
+                                                            pager.AllowedPageSizes(new[] { 10, 25, 50, 100 });
                                                             pager.ShowInfo(true);
                                                         })
                                                         .FocusedRowEnabled(true)
@@ -41,9 +41,9 @@ namespace DevExtreme.AspNet.Mvc
                                                             .Enabled(true)
                                                             .AllowSearch(true)
                                                         )
-                                                        .Width("100%")
-                                                        .Height("100%")
-                                                        .ColumnHidingEnabled(true)
+                                                        //.Width("100%")
+                                                        //.Height("100%")
+                                                        //.ColumnHidingEnabled(true)
                                                        .Selection(s => s.Mode(SelectionMode.Multiple))
                                                        .Export(e => e.Enabled(true)
                                                        .AllowExportSelectedData(true));

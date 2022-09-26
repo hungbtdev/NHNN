@@ -16,12 +16,12 @@
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "Newtonsoft.Json": "12.0.2",
           "System.IdentityModel.Tokens.Jwt": "5.5.0",
-          "Vinorsoft.Core.Domain": "1.1.7577.17291",
-          "Vinorsoft.Core.DTO": "1.1.7577.17633",
-          "Vinorsoft.Core.Entities": "1.1.7577.17634",
-          "Vinorsoft.Core.Interface": "1.1.7577.17635",
-          "Vinorsoft.Core.Resx": "1.1.7573.29469",
-          "Vinorsoft.Core.Utils": "1.1.7573.29478"
+          "Vinorsoft.Core.Domain": "1.1.8301.24140",
+          "Vinorsoft.Core.DTO": "1.1.8301.24140",
+          "Vinorsoft.Core.Entities": "1.1.8301.24140",
+          "Vinorsoft.Core.Interface": "1.1.8301.24139",
+          "Vinorsoft.Core.Resx": "1.1.8301.24140",
+          "Vinorsoft.Core.Utils": "1.1.8301.24140"
         },
         "runtime": {
           "Vinorsoft.Core.dll": {}
@@ -617,51 +617,51 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "Vinorsoft.Core.Domain/1.1.7577.17291": {
+      "Vinorsoft.Core.Domain/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.Domain.dll": {
-            "assemblyVersion": "1.1.7577.17291",
-            "fileVersion": "1.1.7577.17291"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.DTO/1.1.7577.17633": {
+      "Vinorsoft.Core.DTO/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.DTO.dll": {
-            "assemblyVersion": "1.1.7577.17633",
-            "fileVersion": "1.1.7577.17633"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.Entities/1.1.7577.17634": {
+      "Vinorsoft.Core.Entities/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.Entities.dll": {
-            "assemblyVersion": "1.1.7577.17634",
-            "fileVersion": "1.1.7577.17634"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.Interface/1.1.7577.17635": {
+      "Vinorsoft.Core.Interface/1.1.8301.24139": {
         "runtime": {
           "Vinorsoft.Core.Interface.dll": {
-            "assemblyVersion": "1.1.7577.17635",
-            "fileVersion": "1.1.7577.17635"
+            "assemblyVersion": "1.1.8301.24139",
+            "fileVersion": "1.1.8301.24139"
           }
         }
       },
-      "Vinorsoft.Core.Resx/1.1.7573.29469": {
+      "Vinorsoft.Core.Resx/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.Resx.dll": {
-            "assemblyVersion": "1.1.7573.29469",
-            "fileVersion": "1.1.7573.29469"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.Utils/1.1.7573.29478": {
+      "Vinorsoft.Core.Utils/1.1.8301.24140": {
         "runtime": {
           "Vinorsoft.Core.Utils.dll": {
-            "assemblyVersion": "1.1.7573.29478",
-            "fileVersion": "1.1.7573.29478"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       }
@@ -1142,32 +1142,32 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "Vinorsoft.Core.Domain/1.1.7577.17291": {
+    "Vinorsoft.Core.Domain/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.DTO/1.1.7577.17633": {
+    "Vinorsoft.Core.DTO/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Entities/1.1.7577.17634": {
+    "Vinorsoft.Core.Entities/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Interface/1.1.7577.17635": {
+    "Vinorsoft.Core.Interface/1.1.8301.24139": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Resx/1.1.7573.29469": {
+    "Vinorsoft.Core.Resx/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Utils/1.1.7573.29478": {
+    "Vinorsoft.Core.Utils/1.1.8301.24140": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

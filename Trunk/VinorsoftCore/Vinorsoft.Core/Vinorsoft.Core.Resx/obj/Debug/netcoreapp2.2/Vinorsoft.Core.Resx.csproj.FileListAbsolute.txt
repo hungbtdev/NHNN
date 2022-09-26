@@ -1,0 +1,15 @@
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Resx.deps.json
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Resx.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Libs\netcoreapp2.2\Vinorsoft.Core.Resx.pdb
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.csproj.AssemblyReference.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.AuthResource.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.CoreErrorResource.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.CoreMsgResource.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.NotificationResource.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.Profile_Resource.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.Resources.resources
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.csproj.GenerateResource.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.GeneratedMSBuildEditorConfig.editorconfig
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.csproj.CoreCompileInputs.cache
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.dll
+D:\NHNN\Trunk\VinorsoftCore\Vinorsoft.Core\Vinorsoft.Core.Resx\obj\Debug\netcoreapp2.2\Vinorsoft.Core.Resx.pdb

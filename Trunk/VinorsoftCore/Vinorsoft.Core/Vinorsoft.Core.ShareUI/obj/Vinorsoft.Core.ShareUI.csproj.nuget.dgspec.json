@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj": {}
+    "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj": {}
   },
   "projects": {
-    "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj": {
+    "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
+        "projectUniqueName": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
         "projectName": "Vinorsoft.Core.ShareUI",
-        "projectPath": "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
+        "projectPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\Vinorsoft.Core.ShareUI.csproj",
         "packagesPath": "C:\\Users\\hungb\\.nuget\\packages\\",
-        "outputPath": "E:\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\obj\\",
+        "outputPath": "D:\\NHNN\\Trunk\\VinorsoftCore\\Vinorsoft.Core\\Vinorsoft.Core.ShareUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
           "C:\\Users\\hungb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,7 +24,6 @@
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -6,15 +6,20 @@
   "compilationOptions": {
     "defines": [
       "TRACE",
-      "RELEASE",
+      "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP2_2"
+      "NETCOREAPP2_2",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER"
     ],
     "languageVersion": "7.3",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": true,
+    "optimize": false,
     "keyFile": "",
     "emitEntryPoint": false,
     "xmlDoc": false,
@@ -28,9 +33,9 @@
           "DevExtreme.AspNet.Data": "2.6.1",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Vinorsoft.Core.App": "1.1.7618.26530",
+          "Vinorsoft.Core.App": "1.1.8301.24139",
           "Vinorsoft.Core.Domain": "1.1.7577.17641",
-          "Vinorsoft.Core.DTO": "1.1.7577.17664",
+          "Vinorsoft.Core.DTO": "1.1.7628.30311",
           "Vinorsoft.Core.Resx": "1.1.7626.17182",
           "Vinorsoft.Core.Utils": "1.1.7577.17658"
         },
@@ -1848,11 +1853,11 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "Vinorsoft.Core.App/1.1.7618.26530": {
+      "Vinorsoft.Core.App/1.1.8301.24139": {
         "runtime": {
           "Vinorsoft.Core.App.dll": {
-            "assemblyVersion": "1.1.7628.30311",
-            "fileVersion": "1.1.7628.30311"
+            "assemblyVersion": "1.1.8301.24139",
+            "fileVersion": "1.1.8301.24139"
           }
         },
         "compile": {
@@ -1862,19 +1867,19 @@
       "Vinorsoft.Core.Domain/1.1.7577.17641": {
         "runtime": {
           "Vinorsoft.Core.Domain.dll": {
-            "assemblyVersion": "1.1.7577.17641",
-            "fileVersion": "1.1.7577.17641"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         },
         "compile": {
           "Vinorsoft.Core.Domain.dll": {}
         }
       },
-      "Vinorsoft.Core.DTO/1.1.7577.17664": {
+      "Vinorsoft.Core.DTO/1.1.7628.30311": {
         "runtime": {
           "Vinorsoft.Core.DTO.dll": {
-            "assemblyVersion": "1.1.7628.30311",
-            "fileVersion": "1.1.7628.30311"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         },
         "compile": {
@@ -1884,8 +1889,8 @@
       "Vinorsoft.Core.Resx/1.1.7626.17182": {
         "runtime": {
           "Vinorsoft.Core.Resx.dll": {
-            "assemblyVersion": "1.1.7626.17182",
-            "fileVersion": "1.1.7626.17182"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         },
         "compile": {
@@ -1895,43 +1900,43 @@
       "Vinorsoft.Core.Utils/1.1.7577.17658": {
         "runtime": {
           "Vinorsoft.Core.Utils.dll": {
-            "assemblyVersion": "1.1.7577.17658",
-            "fileVersion": "1.1.7577.17658"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         },
         "compile": {
           "Vinorsoft.Core.Utils.dll": {}
         }
       },
-      "Vinorsoft.Core.Entities/1.1.7577.17645": {
+      "Vinorsoft.Core.Entities/1.1.7628.30311": {
         "runtime": {
           "Vinorsoft.Core.Entities.dll": {
-            "assemblyVersion": "1.1.7628.30311",
-            "fileVersion": "1.1.7628.30311"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.Interface/1.1.7578.31485": {
+      "Vinorsoft.Core.Interface/1.1.8301.24139": {
         "runtime": {
           "Vinorsoft.Core.Interface.dll": {
-            "assemblyVersion": "1.1.7628.30311",
-            "fileVersion": "1.1.7628.30311"
+            "assemblyVersion": "1.1.8301.24139",
+            "fileVersion": "1.1.8301.24139"
           }
         }
       },
-      "Vinorsoft.Core/1.1.7618.26530": {
+      "Vinorsoft.Core/1.1.7628.30327": {
         "runtime": {
           "Vinorsoft.Core.dll": {
-            "assemblyVersion": "1.1.7628.30312",
-            "fileVersion": "1.1.7628.30312"
+            "assemblyVersion": "1.1.8301.24140",
+            "fileVersion": "1.1.8301.24140"
           }
         }
       },
-      "Vinorsoft.Core.VDbContext/1.1.7578.31488": {
+      "Vinorsoft.Core.VDbContext/1.1.7628.30327": {
         "runtime": {
           "Vinorsoft.Core.VDbContext.dll": {
-            "assemblyVersion": "1.1.7628.30311",
-            "fileVersion": "1.1.7628.30311"
+            "assemblyVersion": "1.1.7628.30327",
+            "fileVersion": "1.1.7628.30327"
           }
         }
       },
@@ -3202,7 +3207,7 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "Vinorsoft.Core.App/1.1.7618.26530": {
+    "Vinorsoft.Core.App/1.1.8301.24139": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3212,7 +3217,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.DTO/1.1.7577.17664": {
+    "Vinorsoft.Core.DTO/1.1.7628.30311": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3227,22 +3232,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Entities/1.1.7577.17645": {
+    "Vinorsoft.Core.Entities/1.1.7628.30311": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.Interface/1.1.7578.31485": {
+    "Vinorsoft.Core.Interface/1.1.8301.24139": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core/1.1.7618.26530": {
+    "Vinorsoft.Core/1.1.7628.30327": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Vinorsoft.Core.VDbContext/1.1.7578.31488": {
+    "Vinorsoft.Core.VDbContext/1.1.7628.30327": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
